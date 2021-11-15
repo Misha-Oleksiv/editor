@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<link rel="stylesheet" href="./style.css">
+	<title>Контрольна робота</title>
+
+</head>
+
+<body>
+
+	<div class="container">
+		<!-- First block (first window shown on display) -->
+		<div class="first show">
+			<div class="top-block block">
+				<p>Lorem ipsum dolor sit amet.</p>
+				<p>Lorem ipsum dolor sit amet.</p>
+				<p>Lorem ipsum dolor sit amet.</p>
+				<p>Lorem ipsum dolor sit amet.</p>
+				<p>Lorem ipsum dolor sit amet.</p>
+			</div>
+			<!-- Center block with Edit and Style buttons -->
+			<div class="center-block">
+				<input type="button" value="Edit" class="btn-edit center-btn">
+				<input type="button" value="Style" class="btn-style center-btn">
+			</div>
+			<!-- Bottom block Editind area and buttons Add / Save -->
+			<div class="bottom-block block">
+				<div class="edit-block">
+					<textarea id="" class="edit-area"></textarea>
+					<input type="button" value="add" class="btn-add">
+					<input type="button" value="save" class="btn-save">
+				</div>
+				<!-- Block for text styling  -->
+				<div class="style-block">
+					<form name="style">
+						<!-- Font size options -->
+						<div class="form-size" onclick="fontSize()">
+							<h2 class="style-header">Font size:</h2>
+							<label for="12px"><input type="radio" id="12px" class="size" name="size" value="12px"><span
+									class="font-size">12px</span></label>
+							<label for="14px"><input type="radio" id="14px" class="size" name="size" value="14px"><span
+									class="font-size">14px</span></label>
+							<label for="16px"><input type="radio" id="16px" class="size" name="size" value="16px" checked><span
+									class="font-size">16px</span></label>
+							<label for="18px"><input type="radio" id="18px" class="size" name="size" value="18px"><span
+									class="font-size">18px</span></label>
+							<label for="20px"><input type="radio" id="20px" class="size" name="size" value="20px"><span
+									class="font-size">20px</span></label>
+						</div>
+						<!-- Font Family options -->
+						<div class="form-family">
+							<h2 class="style-header">Font family:</h2>
+							<select id="font-family">
+								<option value="" selected disabled>Choose option</option>
+								<option value="cursive">Cursive</option>
+								<option value="fantasy">Fantasy</option>
+								<option value="monospace">Monospace</option>
+								<option value="sans-serif">Sans-serif</option>
+							</select>
+						</div>
+						<!-- Colors options -->
+						<div class="form-color">
+							<h2 class="style-header">Color</h2>
+							<input type="button" value="Color of text" class="btn-text-color btn-color">
+							<input type="button" value="Background color" class="btn-bg-color btn-color">
+							<div class="colors hide">
+								<div class="color-box"></div>
+								<div class="color-box"></div>
+								<div class="color-box"></div>
+								<div class="color-box"></div>
+								<div class="color-box"></div>
+								<div class="color-box"></div>
+								<div class="color-box"></div>
+								<div class="color-box"></div>
+								<div class="color-box"></div>
+							</div>
+						</div>
+						<!-- Font weight options -->
+						<div class="form-style">
+							<label for="bold"><input type="checkbox" id="bold" class="font-weight-bold"><span
+									class="font-style">Bold text</span></label>
+							<label for="cursive"><input type="checkbox" id="cursive" class="font-cursive"><span
+									class="font-style">Cursive text</span></label>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<!-- Second block (for creating tables and lists) -->
+		<div class="second">
+			<div class="block">
+				<!-- Block for table and list creating -->
+				<h2 class="create-header">Choose what you want.</h2>
+				<!-- Buttons for selecting of table or list creating -->
+				<form class="list-form">
+					<label for="choose-table">
+						<input type="radio" name="choose" id="choosi-table" class="choose-table"><span>Table</span>
+					</label>
+					<label for="choosi-list">
+						<input type="radio" name="choose" id="choosi-list"	class="choose-list"><span>List</span>
+					</label>
+				</form>
+				<!-- Creating or the Table -->
+				<div class="create-table hide">
+					<form name="form-table">
+						<div class="table-block">
+							<span class="table-details">Count TR</span>
+							<input class="table-input" type="text" name="countTr">
+						</div>
+						<div class="table-block">
+							<span class="table-details">Count TD</span>
+							<input class="table-input" type="text" name="countTd"> 
+						</div>
+					<!-- Sizing rows and cols of the Table -->
+						<h4>Add style to your table</h4>
+						<div class="table-block">
+							<span class="table-details">Width of TD</span>
+							<input class="table-input" type="text" name="tdWidth">
+						</div>
+						<div class="table-block">
+							<span class="table-details">Height of TD</span>
+							<input class="table-input" type="text" name="tdHeight">
+						</div>
+							<!-- Styling border of the Table -->
+						<div class="table-border">
+							<div class="table-border-dimention">
+								<span  class="table-border-details">Width of border</span>
+								<input type="text" name="borderWidth" class="table-border-option">
+							</div>
+							<div class="table-border-dimention">
+								<span  class="table-border-details">Type of border:</span>
+								<select name="borderType" class="table-border-option">
+									<option value="solid">Solid</option>
+									<option value="dotted">Dotted</option>
+									<option value="dashed ">Dashed </option>
+								</select>
+							</div>
+							<div class="table-border-dimention">
+								<span  class="table-border-details">Color of border:</span>
+								<select name="borderColor" class="table-border-option">
+									<option value="black">Black</option>
+									<option value="red">Red</option>
+									<option value="green">Green </option>
+									<option value="orange">Orange </option>
+								</select>
+							</div>
+						</div>
+						<input type="button" value="Create table" name="create" id="cretaeTable" class="btn-create-table">
+					</form>
+				</div>
+				<!-- Creating of the List -->
+				<div class="create-list hide">
+					<form name="form-list">
+						<div class="list-block">
+							<span class="list-names">Count Li:</span>
+							<input class="list-input" type="text" name="count">
+						</div>
+						<div class="list-block">
+							<span class="list-names">Type of marks:</span>
+							<select class="list-input" name="type">
+								<option value="circle">Circle</option>
+								<option value="disc">Disc</option>
+								<option value="square">Square</option>
+							</select>
+						</div>
+						<input type="button" value="Create list" name="create" class="btn-create-list">
+					</form>
+				</div>
+			</div>
+
+		</div>
+		
+	</div>
+
+	<script src="script.js"></script>
+
+</body>
+
+</html>
